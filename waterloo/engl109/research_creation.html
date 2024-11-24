@@ -47,35 +47,26 @@ x=m cos(θ), y=m sin(θ)
 
 [[Continue|The First Trial, 1]]</tw-passagedata><tw-passagedata pid="7" name="Travel, Sea" tags="" position="500,300" size="100,100">A lonely gull plies the open sky above you, its piercing cry is rife with yearning for the bygone shore. The ceaseless undulations of mighty waves forbid you from forgetting the frailty of your vessel. As you peer over the side of your craft, immense shadows slithering beneath the surface hint at unimaginable depths.
 
-(if:$trial is 0)[[[Continue|The First Trial, 1]]]
-(else-if:$trial is 1)[[[Continue|The Second Trial, 1]]]
-(else-if:$trial is 2)[[[Continue|The Third Trial, 1]]]
-(else-if:$trial is 3)[[[Continue|Victory]]]</tw-passagedata><tw-passagedata pid="8" name="Travel, Forest" tags="" position="300,300" size="100,100">The trunks of arboreal giants crowd around you, their greedy fingers groping at your clothes. Meager sunlight filters through the canopy, carrying with it fragments of birdsong. Every concussion of your footfalls heralds the sound of indistinct scurrying from the undergrowth.
+(if:$trial is 0)[[[Continue|The First Trial, 1]]](else-if:$trial is 1)[[[Continue|The Second Trial, 1]]](else-if:$trial is 2)[[[Continue|The Third Trial, 1]]](else-if:$trial is 3)[[[Continue|Victory]]]</tw-passagedata><tw-passagedata pid="8" name="Travel, Forest" tags="" position="300,300" size="100,100">The trunks of arboreal giants crowd around you, their greedy fingers groping at your clothes. Meager sunlight filters through the canopy, carrying with it fragments of birdsong. Every concussion of your footfalls heralds the sound of indistinct scurrying from the undergrowth.
 
-(if:$trial is 0)[[[Continue|The First Trial, 1]]]
-(else-if:$trial is 1)[[[Continue|The Second Trial, 1]]]
-(else-if:$trial is 2)[[[Continue|The Third Trial, 1]]]
-(else-if:$trial is 3)[[[Continue|Victory]]]</tw-passagedata><tw-passagedata pid="9" name="Travel, Desert" tags="" position="700,300" size="100,100">The tyrannical sun sinks her jagged nails deep into your flesh, for there is no respite beneath her gaze. Desperate thirst muddles the distinctions between your own thoughts and the endless sussurations of the apathetic dunes. Skeletal remnants of vegetation give the impression of open graves upon the sand.
+(if:$trial is 0)[[[Continue|The First Trial, 1]]](else-if:$trial is 1)[[[Continue|The Second Trial, 1]]](else-if:$trial is 2)[[[Continue|The Third Trial, 1]]](else-if:$trial is 3)[[[Continue|Victory]]]</tw-passagedata><tw-passagedata pid="9" name="Travel, Desert" tags="" position="700,300" size="100,100">The tyrannical sun sinks her jagged nails deep into your flesh, for there is no respite beneath her gaze. Desperate thirst muddles the distinctions between your own thoughts and the endless sussurations of the apathetic dunes. Skeletal remnants of vegetation give the impression of open graves upon the sand.
 
-(if:$trial is 0)[[[Continue|The First Trial, 1]]]
-(else-if:$trial is 1)[[[Continue|The Second Trial, 1]]]
-(else-if:$trial is 2)[[[Continue|The Third Trial, 1]]]
-(else-if:$trial is 3)[[[Continue|Victory]]]</tw-passagedata><tw-passagedata pid="10" name="The First Trial, Win" tags="" position="500,700" size="100,100">Your fireball hits the Dragon! The direct strike brings the beast crashing to the ground.
+(if:$trial is 0)[[[Continue|The First Trial, 1]]](else-if:$trial is 1)[[[Continue|The Second Trial, 1]]](else-if:$trial is 2)[[[Continue|The Third Trial, 1]]](else-if:$trial is 3)[[[Continue|Victory]]]</tw-passagedata><tw-passagedata pid="10" name="The First Trial, Win" tags="" position="500,700" size="100,100">Your fireball hits the Dragon! The direct strike brings the beast crashing to the ground.
 
 [[Travel to the next trial|Travel]]</tw-passagedata><tw-passagedata pid="11" name="The First Trial, Loss" tags="" position="700,700" size="100,100">Your fireball misses the Dragon! Before you have time to cast another, the beast crushes you.
 
-[[Continue|Death]]</tw-passagedata><tw-passagedata pid="12" name="Death" tags="" position="700,100" size="100,100">You have perished... 💀</tw-passagedata><tw-passagedata pid="13" name="Wise Sages, 2" tags="" position="300,500" size="100,100">(if:$master is $trial)[
-You have arrived at the tower of the Wise Sage. As you gaze upwards, it seems to loom impossibly tall. Though garbed in legions of ivy, its ancient bricks yet still stand strong. You might think it abandoned, were it not for the strange lights shining from the upmost windows. You raise your hand, but the door swings open before you can knock. You see no one, but a voice beckons you to ascend the stairs. At the top, you find the Wise Sage waiting in their study. As you explain your tribulations, they urge you to be seated. The sermon is about to begin.
+[[Continue|Death]]</tw-passagedata><tw-passagedata pid="12" name="Death" tags="" position="700,100" size="100,100">You have been slain.
 
-(if:$master is 1)[[Continue|Master of Kinematics]]
-(if:$master is 2)[[Continue|Master of Electricity]]
-(if:$master is 3)[[Continue|Master of Harmonics]]
-]
-(else:)[
-This master is unable to help you with the current Mortal Trial.
+(if: (history:) contains &quot;Death&quot;)[There is no return from death.](else: )[Fortune favours the bold. The gods are feeling merciful, you will be resurrected.
 
-[[Return|Wise Sages, 1]]
-]</tw-passagedata><tw-passagedata pid="14" name="Victory" tags="" position="525,100" size="100,100">By overcoming every Mortal Trial, you have demonstrated that you are worthy of the rank of journeyman. Congratulations! </tw-passagedata><tw-passagedata pid="15" name="The Second Trial, 2" tags="" position="300,900" size="100,100">You conclude that to open the door, you must move its two handles into a certain configuration. Using one of your trusty magic artifacts, you determine that each handle possesses an electrical charge of 100 microcouloumbs. Upon further inspection, you notice that the letter &#39;C&#39; appears numerous times throughout the door&#39;s runes. How far apart should you move the handles so that the conditions of the lock are met?
+(if:$trial is 1)[[[Return|The First Trial, 1]]]
+(else-if:$trial is 2)[[[Return|The Second Trial, 1]]]
+(else-if:$trial is 3)[[[Return|The Third Trial, 1]]]]</tw-passagedata><tw-passagedata pid="13" name="Wise Sages, 2" tags="" position="300,500" size="100,100">(if:$master is $trial)[You have arrived at the tower of the Wise Sage. As you gaze upwards, it seems to loom impossibly tall. Though garbed in legions of ivy, its ancient bricks yet still stand strong. You might think it abandoned, were it not for the strange lights shining from the upmost windows. You raise your hand, but the door swings open before you can knock. You see no one, but a voice beckons you to ascend the stairs. At the top, you find the Wise Sage waiting in their study. As you explain your tribulations, they urge you to be seated. The sermon is about to begin.
+
+(if:$master is 1)[[Continue|Master of Kinematics]](if:$master is 2)[[Continue|Master of Electricity]](if:$master is 3)[[Continue|Master of Harmonics]]]
+(else:)[This master is unable to help you with the current Mortal Trial.
+
+[[Return|Wise Sages, 1]]]</tw-passagedata><tw-passagedata pid="14" name="Victory" tags="" position="525,100" size="100,100">By overcoming every Mortal Trial, you have demonstrated that you are worthy of the rank of journeyman. Congratulations! </tw-passagedata><tw-passagedata pid="15" name="The Second Trial, 2" tags="" position="300,900" size="100,100">You conclude that to open the door, you must move its two handles into a certain configuration. Using one of your trusty magic artifacts, you determine that each handle possesses an electrical charge of 100 microcouloumbs. Upon further inspection, you notice that the letter &#39;C&#39; appears numerous times throughout the door&#39;s runes. How far apart should you move the handles so that the conditions of the lock are met?
 
 [[0.8 m|The Second Trial, Loss]]
 [[0.9 m|The Second Trial, Win]]
